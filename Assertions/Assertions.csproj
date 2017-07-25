@@ -98,7 +98,6 @@
     <Compile Include="Asserts\TypeAsserts.cs" />
     <Compile Include="TimingAssertions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WaitAssert.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
