@@ -26,6 +26,8 @@ namespace Tests
 
       Assert
         .WaitMilliseconds(waitTime)
+        .False(false)
+        .Contains(1, new[] {1,2,3})
         .True(true);
 
       Assert.True(timer.ElapsedMilliseconds >= waitTime);
