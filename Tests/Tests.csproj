@@ -52,6 +52,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AttemptTests.cs" />
     <Compile Include="Attributes\TimeoutAttribute.cs" />
     <Compile Include="TimeoutAttributeTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

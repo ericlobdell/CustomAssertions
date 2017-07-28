@@ -96,6 +96,7 @@
     <Compile Include="Asserts\SetAsserts.cs" />
     <Compile Include="Asserts\StringAsserts.cs" />
     <Compile Include="Asserts\TypeAsserts.cs" />
+    <Compile Include="Attempt.cs" />
     <Compile Include="FluentAssert.cs" />
     <Compile Include="FluentAsserter.cs" />
     <Compile Include="TimingAssertions.cs" />
