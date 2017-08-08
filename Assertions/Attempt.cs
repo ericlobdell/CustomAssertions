@@ -5,7 +5,7 @@ namespace Xunit
 {
   public static class Attempt
   {
-    public static void ForMilliseconds(long timoutInMilliseconds, Action assertion)
+     public static void ForMilliseconds(long timoutInMilliseconds, Action assertion)
     {
       Stopwatch timer = new Stopwatch();
       timer.Start();
@@ -14,11 +14,18 @@ namespace Xunit
       {
         try
         {
+          Thread.Sleep(100);
           assertion();
           break;
         }
-        catch (Exception){}
+        catch (Exception) {
+          if (timer.ElapsedMilliseconds >= timoutInMilliseconds)
+            assertion();
+        }
       }
+
+      if (timer.ElapsedMilliseconds >= timoutInMilliseconds)
+        assertion();
     }
 
     public static void ForSeconds(int timoutInSeconds, Action assertion) =>
